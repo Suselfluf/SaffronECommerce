@@ -8,9 +8,9 @@ class SaffronProducts(models.Model):
     description = models.TextField(max_length=300, blank=True)
     price = models.DecimalField(max_digits=5, decimal_places=2, default=500.00)
     weight = models.DecimalField(max_digits=5, decimal_places=2, default=4.00)
-    image = models.ImageField(upload_to='./SaffronECommerce/static/images/', height_field=None, width_field=None, max_length=None)
+    # image = models.ImageField(upload_to='./static/images/', height_field=None, width_field=None, max_length=None)
+    image = models.ImageField(upload_to='./static/images/', max_length=None)
     
-
     class Meta:
         verbose_name = ("Product")
         verbose_name_plural = ("Products")
@@ -22,7 +22,7 @@ class SaffroonBGInfo(models.Model):
     
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=800, blank=True)
-    image = models.ImageField(upload_to='./SaffronECommerce/static/images/', height_field=None, width_field=None, max_length=None, blank=True)
+    image = models.ImageField(upload_to='./static/images/', height_field=None, width_field=None, max_length=None, blank=True)
     
     class Meta:
         verbose_name = ("Block with information")

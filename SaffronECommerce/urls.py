@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from safrecommerce import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('safrecommerce.urls')),
-    # path('',include('safrecommerce.urls'))
+    path('', views.index, name='index'),
 ]
