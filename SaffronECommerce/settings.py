@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'safrecommerce.apps.SafrecommerceConfig',
     'rest_framework',
+    "phonenumber_field",
 ]
 
 MIDDLEWARE = [

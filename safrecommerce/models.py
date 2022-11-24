@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 # Create your models here.
 class SaffronProducts(models.Model):
@@ -11,8 +12,8 @@ class SaffronProducts(models.Model):
     
 
     class Meta:
-        verbose_name = ("Saffron's Product")
-        verbose_name_plural = ("Saffron's Products")
+        verbose_name = ("Product")
+        verbose_name_plural = ("Products")
 
     def __str__(self):
         return self.title
@@ -24,8 +25,8 @@ class SaffroonBGInfo(models.Model):
     image = models.ImageField(upload_to='./SaffronECommerce/static/images/', height_field=None, width_field=None, max_length=None, blank=True)
     
     class Meta:
-        verbose_name = ("Saffron's History")
-        verbose_name_plural = ("Saffrons's History")
+        verbose_name = ("Block with information")
+        verbose_name_plural = ("Blocks with information")
 
     def __str__(self):
         return self.title
@@ -36,39 +37,40 @@ class CommercialOfferParameeters(models.Model):
     title = models.CharField(max_length=100, default="1st Commercial Offer")
     minimalBulkWeight = models.DecimalField(max_digits=7, default=100.00, decimal_places=2)
     wholesalePriceForGram = models.DecimalField(max_digits=7, decimal_places=2, default=150.00)
-    retailPriceForGram = models.DecimalField(max_digits=7, decimal_places=2, default=150.00)
+    retailPriceForGram = models.DecimalField(max_digits=7, decimal_places=2, default=200.00)
 
     class Meta:
-        verbose_name = ("Commercial offer parameters administration")
-        verbose_name_plural = ("Commercial offer parameters administration")
+        verbose_name = ("Commercial offer")
+        verbose_name_plural = ("Commercial offers")
 
     def __str__(self):
         return self.title 
     
     
     
-class CustomerOfferModel(models.Model):
+# class CustomerOfferModel(models.Model):
     
-    email = models.EmailField(max_length=254)           ##Make this field required to fill in form
-    description = models.TextField(max_length=400, blank=True)
-    weight = models.DecimalField(max_digits=5, decimal_places=2, default=4.00)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=4.00) 
+#     email = models.EmailField(max_length=254)           ##Make this field required to fill in form
+#     description = models.TextField(max_length=400, blank=True)
+#     weight = models.DecimalField(max_digits=5, decimal_places=2, default=4.00)
+#     price = models.DecimalField(max_digits=10, decimal_places=2, default=4.00) 
     
-    class Meta:
-        verbose_name = ("Saffron's History")
-        verbose_name_plural = ("Saffrons's History")
+#     class Meta:
+#         verbose_name = ("Saffron's History")
+#         verbose_name_plural = ("Saffrons's History")
 
-    def __str__(self):
-        return self.title   
+#     def __str__(self):
+#         return self.email   
 
     
 class ContactInfo(models.Model):
     
+    name = models.CharField(max_length=50, default="Ethan Shagaei")
     telegramm = models.CharField(max_length=50, default="@EthanShagaei")
-    # phonenumber = models.PhoneNumberField(blank=True)
+    phoneNumber = PhoneNumberField(null=False, blank=True, unique=True)
     class Meta:
-        verbose_name = ("Saffron's History")
-        verbose_name_plural = ("Saffrons's History")
+        verbose_name = ("Contacts Data")
+        verbose_name_plural = ("Contacts Data")
 
     def __str__(self):
-        return self.title   
+        return self.name   
