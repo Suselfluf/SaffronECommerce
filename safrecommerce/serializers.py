@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import SafrApp
+from .models import *
 
 class SaffrSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SafrApp
+        model = SaffronProducts, SaffroonBGInfo
         fields = "__all__"

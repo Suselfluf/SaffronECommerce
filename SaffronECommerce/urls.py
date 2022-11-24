@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('safrecommerce.urls'))
+    path('api/',include('safrecommerce.urls')),
+    # path('',include('safrecommerce.urls'))
 ]

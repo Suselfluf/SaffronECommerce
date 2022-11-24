@@ -1,0 +1,5 @@
+Activate venv with fish: "source /env/bin/acitvate.fish"
+Deactivate venv: "Deactivate"
+Run server: "python manage.py runserver"
+Migrations: "python manage.py makemigrations" - "python manage.py migrate"
+
