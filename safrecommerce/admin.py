@@ -4,11 +4,11 @@ from .models import *
 
 # Register your models here.
 class SaffrProductsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'description', 'image', 'price', 'weight')
+    list_display = ('id', 'title', 'description', 'image', 'price', 'weightInGr','weightInSot')
     list_display_links = ('id', 'title')
     search_fields = ('id','title','description')
-    list_editable = ('price','weight')
-    list_filter = ('price','weight')
+    list_editable = ('price','weightInSot')
+    list_filter = ('price','weightInSot')
     
 class SaffrBGInfoAdmin(admin.ModelAdmin):
     list_display = ('id', 'title')

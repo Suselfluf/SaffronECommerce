@@ -6,10 +6,10 @@ class SaffronProducts(models.Model):
     
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=300, blank=True)
-    price = models.DecimalField(max_digits=5, decimal_places=2, default=500.00)
-    weight = models.DecimalField(max_digits=5, decimal_places=2, default=4.00)
-    # image = models.ImageField(upload_to='./static/images/', height_field=None, width_field=None, max_length=None)
-    image = models.ImageField(upload_to='./static/images/', max_length=None)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=500.00)
+    weightInGr = models.DecimalField(max_digits=10, decimal_places=2, default=4.00)
+    weightInSot = models.IntegerField()
+    image = models.ImageField(upload_to='images/', max_length=None)
     
     class Meta:
         verbose_name = ("Product")
@@ -22,7 +22,7 @@ class SaffroonBGInfo(models.Model):
     
     title = models.CharField(max_length=100)
     description = models.TextField(max_length=800, blank=True)
-    image = models.ImageField(upload_to='./static/images/', height_field=None, width_field=None, max_length=None, blank=True)
+    image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=None, blank=True)
     
     class Meta:
         verbose_name = ("Block with information")
@@ -35,9 +35,9 @@ class SaffroonBGInfo(models.Model):
 class CommercialOfferParameeters(models.Model):
     
     title = models.CharField(max_length=100, default="1st Commercial Offer")
-    minimalBulkWeight = models.DecimalField(max_digits=7, default=100.00, decimal_places=2)
-    wholesalePriceForGram = models.DecimalField(max_digits=7, decimal_places=2, default=150.00)
-    retailPriceForGram = models.DecimalField(max_digits=7, decimal_places=2, default=200.00)
+    minimalBulkWeight = models.DecimalField(max_digits=10, default=100.00, decimal_places=2)
+    wholesalePriceForGram = models.DecimalField(max_digits=10, decimal_places=2, default=150.00)
+    retailPriceForGram = models.DecimalField(max_digits=10, decimal_places=2, default=200.00)
 
     class Meta:
         verbose_name = ("Commercial offer")
