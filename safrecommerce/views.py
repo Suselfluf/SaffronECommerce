@@ -1,5 +1,7 @@
 from django.views.generic import ListView
 from django.shortcuts import render
+
+from .forms import AddPostForm
 from .models import *
 
 # Create your views here.
@@ -12,9 +14,9 @@ def index(request):
     info_blocks = SaffroonBGInfo.objects.all()
     commercial_pars = CommercialOfferParameeters.objects.all()
     contact_info = ContactInfo.objects.all()
-    
+    form = AddPostForm()
     return render(
         request,
         './safrecommerce/index.html',
-        {'products':products,'info_blocks':info_blocks, 'commercial_pars':commercial_pars,"contact_info":contact_info }
+        {'products':products,'info_blocks':info_blocks, 'commercial_pars':commercial_pars,"contact_info":contact_info, 'form':form}
         )
