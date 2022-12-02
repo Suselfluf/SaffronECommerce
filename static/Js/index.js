@@ -1,5 +1,6 @@
 function myFunction(operation) {
-  let costElement = parseFloat(document.getElementById("price").value);
+  let arr = [];
+  let costElement = document.getElementById("hiden_price").innerHTML;
   let weihgtElement = parseFloat(document.getElementById("weight").value);
   let wieghtStep = parseFloat(document.getElementById("weight").step);
   operation == "Up"
@@ -10,7 +11,9 @@ function myFunction(operation) {
 function increaseWeight(currentSateWeight, currentStateCost, weightStepState) {
   result = parseFloat(currentSateWeight) + weightStepState;
   document.getElementById("weight").value = result.toFixed(1);
-  document.getElementById("price").value = (result.toFixed(1) * 200).toFixed(2);
+  document.getElementById("price").value = (
+    result.toFixed(1) * parseFloat(currentStateCost)
+  ).toFixed(2);
 }
 
 function decreaseWeight(currentSateWeight, currentStateCost, weightStepState) {
@@ -19,5 +22,7 @@ function decreaseWeight(currentSateWeight, currentStateCost, weightStepState) {
   }
   result = parseFloat(currentSateWeight) - weightStepState;
   document.getElementById("weight").value = result.toFixed(1);
-  document.getElementById("price").value = (result.toFixed(1) * 200).toFixed(2);
+  document.getElementById("price").value = (
+    result.toFixed(1) * parseFloat(currentStateCost)
+  ).toFixed(2);
 }

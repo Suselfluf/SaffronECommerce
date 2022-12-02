@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Frame 1</title>
-    <link rel="stylesheet" href="{% static 'css/index3.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index4.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
@@ -137,47 +137,14 @@
             </div>
           </div>
           <div class="cooperation-offer-MP9">
-            {%for pars in commercial_pars%} {% comment %}
-            <form action="{% url 'index' %}" method="POST" class="form-example">
-              {% csrf_token %}
-              <div class="form-example">
-                <label for="email">Enter your email: </label>
-                <input type="email" name="email" id="email" required />
-              </div>
-              <div class="form-example">
-                <label for="email">Description: </label>
-                <input
-                  type="description"
-                  name="description"
-                  id="description"
-                  required
-                />
-              </div>
-              <div class="form-example">
-                <p>
-                  You can buy {{form.weight}} for
-                  <input
-                    type="price"
-                    id="price"
-                    name="price"
-                    value="{{pars.retailPriceForGram}}"
-                  />
-                </p>
-              </div>
-              <div class="form-example">
-                <input type="submit" value="Subscribe!" />
-              </div>
-            </form>
-            {% endcomment %} {%endfor%}
-
             <img
               class="saffron3-1-cLK"
               src="{% static '/assets/saffron3-1.png' %}"
             />
-
             <form action="{% url 'index' %}" method="POST" class="customerForm">
+              {% csrf_token %} {%for prices in commercial_pars%}
+              <p id="hiden_price">{{prices.retailPriceForGram}}</p>
               <div class="offer-block-gRR">
-                {% csrf_token %} {%for prices in commercial_pars%}
                 <p class="cooperation-offer-details-BNB">
                   Cooperation Offer Details
                 </p>
@@ -241,29 +208,8 @@
                 {%endfor%}
               </div>
             </form>
-
-            {% comment %}
-            <div class="offer-block-gRR">
-              {% csrf_token %} {%for prices in commercial_pars%}
-              <p class="cooperation-offer-details-BNB">
-                Cooperation Offer Details
-              </p>
-              <p class="you-can-buy-1-gram-for-200-rubles-G8j">
-                You can buy 1 Gram for {{prices.retailPriceForGram}} Rubles
-              </p>
-
-              <button class="buttons-Suh" type="submit">
-                Form the request
-              </button>
-              <p class="bulking-oreder-starts-from-100-grams-Zsq">
-                Bulking oreder starts from {{prices.minimalBulkWeight}} grams*
-              </p>
-              {%endfor%}
-            </div>
-            {% endcomment %}
           </div>
         </div>
-        <button onclick="myFunction()">Click me!</button>
         <div class="footer-t27">
           <div class="telegram-Qm9">
             {%for admin_data in contact_info %}

@@ -229,6 +229,10 @@ body {
   flex-shrink: 0;
 }
 
+#hiden_price {
+  display: none;
+}
+
 .cooperation-offer-email-input {
   margin: 0rem 0rem 5.1rem 0rem;
   text-align: center;
@@ -240,9 +244,6 @@ body {
   font-family: JetBrains Mono, "Source Sans Pro";
   white-space: nowrap;
   flex-shrink: 0;
-}
-#hiden_price {
-  display: none;
 }
 
 .email-form-input {
@@ -282,6 +283,7 @@ body {
 }
 .weight-form-block {
   display: grid;
+  justify-items: center;
 }
 
 .you-can-buy-1-gram-for-200-rubles-G8j {
@@ -295,7 +297,7 @@ body {
   font-family: JetBrains Mono, "Source Sans Pro";
   white-space: nowrap;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-shrink: 0;
 }
 
