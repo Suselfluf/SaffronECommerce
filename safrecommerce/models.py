@@ -35,6 +35,7 @@ class SaffroonBGInfo(models.Model):
 class CommercialOfferParameeters(models.Model):
     
     title = models.CharField(max_length=100, default="1st Commercial Offer")
+    minumalOfferWeight = models.DecimalField(max_digits=10, default=1.00, decimal_places=1)
     minimalBulkWeight = models.DecimalField(max_digits=10, default=100.00, decimal_places=2)
     wholesalePriceForGram = models.DecimalField(max_digits=10, decimal_places=2, default=150.00)
     retailPriceForGram = models.DecimalField(max_digits=10, decimal_places=2, default=200.00)

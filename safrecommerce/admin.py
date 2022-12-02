@@ -18,10 +18,10 @@ class SaffrBGInfoAdmin(admin.ModelAdmin):
     list_filter = ('title',)
     
 class OfferAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title','minimalBulkWeight','wholesalePriceForGram','retailPriceForGram')
+    list_display = ('id', 'title','minumalOfferWeight','minimalBulkWeight','wholesalePriceForGram','retailPriceForGram')
     # list_display_links = ('id', 'title')
     search_fields = ('id','title',)
-    list_editable = ('title','minimalBulkWeight','wholesalePriceForGram','retailPriceForGram')
+    list_editable = ('title','minumalOfferWeight','minimalBulkWeight','wholesalePriceForGram','retailPriceForGram')
     list_filter = ('wholesalePriceForGram','retailPriceForGram')
 
 class ContactInfoAdmin(admin.ModelAdmin):
