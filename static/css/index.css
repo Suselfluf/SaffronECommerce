@@ -200,7 +200,6 @@ body {
 }
 
 .offer-block-gRR {
-  /* margin: 26rem 1.91rem 0rem 0rem; */
   box-sizing: border-box;
   padding: 6% 6% 3% 5%;
   width: 65%;
@@ -212,6 +211,9 @@ body {
   background-color: rgba(232, 206, 252, 0.200000003);
   border-radius: 9.6rem;
   flex-shrink: 0;
+}
+.customerForm {
+  display: grid;
 }
 
 .cooperation-offer-details-BNB {
