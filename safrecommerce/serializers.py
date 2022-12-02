@@ -3,5 +3,5 @@ from .models import *
 
 class SaffrSerializer(serializers.ModelSerializer):
     class Meta:
-        model = SaffronProducts, SaffroonBGInfo, CommercialOfferParameeters, ContactInfo
+        model = SaffronProducts, SaffroonBGInfo, CommercialOfferParameeters, ContactInfo, CustomerOfferModel
         fields = "__all__"

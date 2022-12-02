@@ -48,19 +48,19 @@ class CommercialOfferParameeters(models.Model):
     
     
     
-# class CustomerOfferModel(models.Model):
+class CustomerOfferModel(models.Model):
     
-#     email = models.EmailField(max_length=254)           ##Make this field required to fill in form
-#     description = models.TextField(max_length=400, blank=True)
-#     weight = models.DecimalField(max_digits=5, decimal_places=2, default=4.00)
-#     price = models.DecimalField(max_digits=10, decimal_places=2, default=4.00) 
-    
-#     class Meta:
-#         verbose_name = ("Saffron's History")
-#         verbose_name_plural = ("Saffrons's History")
+    email = models.EmailField(max_length=254)           ##Make this field required to fill in form
+    description = models.TextField(max_length=400, blank=True)
+    weight = models.DecimalField(max_digits=5, decimal_places=1, default=1.00)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=150.00) 
+    time_created = models.DateTimeField(auto_now_add=True, verbose_name="Offer created at:")
+    class Meta:
+        verbose_name = ("Customer's offer")
+        verbose_name_plural = ("Customers's offers")
 
-#     def __str__(self):
-#         return self.email   
+    def __str__(self):
+        return self.email   
 
     
 class ContactInfo(models.Model):

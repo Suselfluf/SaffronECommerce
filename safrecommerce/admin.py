@@ -30,8 +30,13 @@ class ContactInfoAdmin(admin.ModelAdmin):
     list_editable = ('name', 'telegramm', 'phoneNumber')
     list_filter = ('name',)
     
+class CustomerOfferAdmin(admin.ModelAdmin):
+    list_display = ('id','email','description','weight', 'price', 'time_created')
+    search_fields = ('email','time_created','price')
+    list_filter = ('id','time_created','price','weight')
     
 admin.site.register(SaffronProducts, SaffrProductsAdmin)
 admin.site.register(SaffroonBGInfo, SaffrBGInfoAdmin)
 admin.site.register(CommercialOfferParameeters, OfferAdmin)
 admin.site.register(ContactInfo, ContactInfoAdmin)
+admin.site.register(CustomerOfferModel, CustomerOfferAdmin)

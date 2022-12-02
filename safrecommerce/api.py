@@ -4,7 +4,7 @@ from .serializers import SaffrSerializer
 
 
 class SaffrViewSet(viewsets.ModelViewSet):
-    queryset = SaffronProducts.objects.all(), SaffroonBGInfo.objects.all(), CommercialOfferParameeters.objects.all(), ContactInfo.objects.all()
+    queryset = SaffronProducts.objects.all(), SaffroonBGInfo.objects.all(), CommercialOfferParameeters.objects.all(), ContactInfo.objects.all(), CustomerOfferModel.objects.all()
     permission_classes = [
         permissions.AllowAny
     ]

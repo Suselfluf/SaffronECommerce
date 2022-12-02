@@ -1,34 +1,243 @@
-
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8"></meta>  
-    <style type="text/css">
-      div{
-        height: 400px,
-        width: 300px
-      }
-     </style>
-   
+    <meta charset="utf-8" />
+    {% comment %}
+    <link rel="icon" href="/favicon.ico" />
+    {% endcomment %}
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Frame 1</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter%3A500"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton%3A400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins%3A700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Actor%3A400"
+    />
   </head>
-  <ul>
-    {%for p in products %}
-    <li>
-      <h2>{{p.title}}</h2>
-      <p>{{p.desciption}}</p>
-      <p>{{p.price}}</p>
-      <p>{{p.weight}}</p>
-      <p>{{p.image.url}}</p>
-      <div>
-        <img src="{{ p.image.url }}" width="150" height="200" />
-      </div>
-      
-      <hr>
-    </li>
-    {%endfor%}
-  </ul>
-
   <body>
-    <p>Hello worlds</p>
+    <div class="frame-1-ewM">
+      <div class="hero-Jm1">
+        <div class="header-CV1">
+          <div class="navigation-bars-5Kq">
+            <div class="auto-group-46uh-xZy">
+              <p class="text-gVy">Saffrons Products</p>
+              <p class="text-arF">Cooperation Offer Details</p>
+              <p class="text-u7q">About the Product</p>
+            </div>
+            <div class="buttons-x67">Cooperation offer</div>
+          </div>
+          <img
+            class="saffronimage-1-hwZ"
+            src="{% static 'assets/saffronimage-1.png' %}"
+          />
+          <img
+            class="saffron4-1-V6j"
+            src="{% static '/assets/left_top_saffron.png' %}"
+          />
+
+          <div class="saffron-straight-from-iran-Rm5">
+            <div>Saffron straight</div>
+            <div class="from-Iran">from Iran</div>
+          </div>
+        </div>
+        <div class="auto-group-iitb-cAf">
+          <div class="products-LD1">
+            <div class="auto-group-rbjr-g1y">
+              {%for p in products %}
+              <div class="product-1-o6b">
+                <img class="image-5-wTh" src="{{ p.image.url }}" />
+                <div class="products-module-Rtf">
+                  <div class="product-description-XRu">{{p.title}}</div>
+                  <div class="rub-dzj">{{p.price}} RUB</div>
+                  <div class="auto-group-n3nt-NSX">
+                    <div class="auto-group-wat5-Vn3">{{p.weightInGr}} Gram</div>
+                    <div class="auto-group-kkas-fpw">{{p.weightInSot}} Sot</div>
+                    <div class="rectangle-5-6QT"></div>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+          <div class="bg-info-wrapper">
+            <div class="bg-info-grid-container">
+              <div class="bg-row">
+                <div class="bg-info-title">
+                  <p class="bg-line-small-p">Small text</p>
+                </div>
+                <div class="bg-info-content">
+                  <p class="bg-line-big-p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda quas magnam cupiditate et dignissimos unde esse
+                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
+                    facilis hic architecto sequi!
+                  </p>
+                </div>
+              </div>
+              <div class="bg-row">
+                <div class="bg-info-title">
+                  <p class="bg-line-small-p">Small text</p>
+                </div>
+                <div class="bg-info-content">
+                  <p class="bg-line-big-p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda quas magnam cupiditate et dignissimos unde esse
+                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
+                    facilis hic architecto sequi!
+                  </p>
+                </div>
+              </div>
+              <div class="bg-row">
+                <div class="bg-info-title">
+                  <p class="bg-line-small-p">Small text</p>
+                </div>
+                <div class="bg-info-content">
+                  <p class="bg-line-big-p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda quas magnam cupiditate et dignissimos unde esse
+                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
+                    facilis hic architecto sequi!
+                  </p>
+                </div>
+              </div>
+              <div class="bg-row">
+                <div class="bg-info-title">
+                  <p class="bg-line-small-p">Small text</p>
+                </div>
+                <div class="bg-info-content">
+                  <p class="bg-line-big-p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Assumenda quas magnam cupiditate et dignissimos unde esse
+                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
+                    facilis hic architecto sequi!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cooperation-offer-MP9">
+            {%for pars in commercial_pars%} {% comment %}
+            <form action="{% url 'index' %}" method="POST" class="form-example">
+              {% csrf_token %}
+              <div class="form-example">
+                <label for="email">Enter your email: </label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form-example">
+                <label for="email">Description: </label>
+                <input
+                  type="description"
+                  name="description"
+                  id="description"
+                  required
+                />
+              </div>
+              <div class="form-example">
+                <p>
+                  You can buy {{form.weight}} for
+                  <input
+                    type="price"
+                    id="price"
+                    name="price"
+                    value="{{pars.retailPriceForGram}}"
+                  />
+                </p>
+              </div>
+              <div class="form-example">
+                <input type="submit" value="Subscribe!" />
+              </div>
+            </form>
+            {% endcomment %} {%endfor%}
+
+            <img
+              class="saffron3-1-cLK"
+              src="{% static '/assets/saffron3-1.png' %}"
+            />
+
+            <form action="{% url 'index' %}" method="POST" class="customerForm">
+              <div class="offer-block-gRR">
+                {% csrf_token %} {%for prices in commercial_pars%}
+                <p class="cooperation-offer-details-BNB">
+                  Cooperation Offer Details
+                </p>
+                <p class="you-can-buy-1-gram-for-200-rubles-G8j">
+                  You can buy 1 Gram for {{prices.retailPriceForGram}} Rubles
+                </p>
+
+                <button class="buttons-Suh" type="submit">
+                  Form the request
+                </button>
+                <p class="bulking-oreder-starts-from-100-grams-Zsq">
+                  Bulking oreder starts from {{prices.minimalBulkWeight}} grams*
+                </p>
+
+                {%endfor%}
+              </div>
+            </form>
+
+            {% comment %}
+            <div class="offer-block-gRR">
+              {% csrf_token %} {%for prices in commercial_pars%}
+              <p class="cooperation-offer-details-BNB">
+                Cooperation Offer Details
+              </p>
+              <p class="you-can-buy-1-gram-for-200-rubles-G8j">
+                You can buy 1 Gram for {{prices.retailPriceForGram}} Rubles
+              </p>
+
+              <button class="buttons-Suh" type="submit">
+                Form the request
+              </button>
+              <p class="bulking-oreder-starts-from-100-grams-Zsq">
+                Bulking oreder starts from {{prices.minimalBulkWeight}} grams*
+              </p>
+              {%endfor%}
+            </div>
+            {% endcomment %}
+          </div>
+        </div>
+        <div class="footer-t27">
+          <div class="telegram-Qm9">
+            {%for admin_data in contact_info %}
+            <div class="ethanshagaei-NCB">{{admin_data.telegramm}}</div>
+            <img
+              class="icons8-app-120-1-6P5"
+              src="{% static '/assets/icons8-app-120-1.png' %}"
+            />
+          </div>
+          <div class="contact-number-c6X">
+            <div class="item-7-926-484-72-55-ZnT">
+              {{admin_data.phoneNumber}}
+            </div>
+            <img
+              class="icons8-phone-96-1-t43"
+              src="{% static '/assets/phone_icon.png' %}"
+            />
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
   </body>
 </html>
