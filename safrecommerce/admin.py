@@ -31,7 +31,8 @@ class ContactInfoAdmin(admin.ModelAdmin):
     list_filter = ('name',)
     
 class CustomerOfferAdmin(admin.ModelAdmin):
-    list_display = ('id','email','description','weight', 'price', 'time_created')
+    
+    list_display = ('id', 'name', 'phoneNumber', 'email','description','weight', 'price', 'time_created')
     search_fields = ('email','time_created','price')
     list_filter = ('id','time_created','price','weight')
     

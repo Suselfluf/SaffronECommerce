@@ -18,8 +18,11 @@ def index(request):
     if request.method == "POST":
         form = CustomerOfferForm(request.POST)
         print("Printing post:", request.POST)
-        # if form.is_valid():
-        #     form.save()
+        if form.is_valid():                 # Unfortunately can not provide duplicating phonenumbers within the database, however can serve as protection from sending multiple same data request
+            form.save()
+            # form.clean()
+        else:
+            print("Wrong")
        
     return render(
         request,

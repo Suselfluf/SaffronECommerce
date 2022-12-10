@@ -217,7 +217,7 @@ body {
 }
 
 .cooperation-offer-details-BNB {
-  margin: 0rem 0rem 14.1rem 0rem;
+  margin: 0rem 0rem 5.1rem 0rem;
   text-align: center;
   font-size: 3.2rem;
   font-weight: 700;
@@ -228,12 +228,65 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
-.frame-1-ewM
-  .hero-Jm1
-  .auto-group-iitb-cAf
-  .cooperation-offer-MP9
-  .offer-block-gRR
-  .you-can-buy-1-gram-for-200-rubles-G8j {
+
+#hiden_price {
+  display: none;
+}
+
+.cooperation-offer-email-input {
+  margin: 0rem 0rem 5.1rem 0rem;
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.224rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.email-form-input {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.224rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  background-color: #faf5fe;
+  border-bottom: 1px solid rgb(162, 153, 153);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.weight-form-input {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.224rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  background-color: #faf5fe;
+}
+
+.price-form-input {
+  text-align: center;
+  font-size: 3.2rem;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.224rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  background-color: #faf5fe;
+}
+.weight-form-block {
+  display: grid;
+  justify-items: center;
+}
+
+.you-can-buy-1-gram-for-200-rubles-G8j {
   margin: 0rem 0.503rem 4.4rem 0rem;
   text-align: center;
   font-size: 3.2rem;
@@ -244,7 +297,7 @@ body {
   font-family: JetBrains Mono, "Source Sans Pro";
   white-space: nowrap;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   flex-shrink: 0;
 }
 
@@ -430,15 +483,20 @@ body {
   align-items: center;
   display: block;
   background-color: rgba(232, 206, 252, 0.200000003);
+  /* transform: rotate(30deg); */
 }
 .bg-info-grid-container {
   padding-top: 15%;
   padding-bottom: 5%;
   display: grid;
 }
+.phone_and_name_wrapper {
+  display: grid;
+}
 .bg-row {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 45% 55%;
   column-gap: 5%;
@@ -448,16 +506,15 @@ body {
   letter-spacing: -0.224rem;
   color: #000000;
   font-family: JetBrains Mono, "Source Sans Pro";
+  /* transform: rotate(-30deg); */
+  /* position: relative; */
 }
 .bg-info-title {
   display: grid;
-  border: #000000 2px dashed;
+  /* border: #000000 2px dashed; */
 }
 .bg-info-content {
   font-size: 2.4rem;
-
-  /* overflow: hidden; */
-  border: #a44a4a 2px dashed;
   text-align: justify;
 }
 .bg-line-small-p {

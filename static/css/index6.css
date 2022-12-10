@@ -229,6 +229,10 @@ body {
   flex-shrink: 0;
 }
 
+#hiden_price {
+  display: none;
+}
+
 .cooperation-offer-email-input {
   margin: 0rem 0rem 5.1rem 0rem;
   text-align: center;
@@ -479,15 +483,46 @@ body {
   align-items: center;
   display: block;
   background-color: rgba(232, 206, 252, 0.200000003);
+  /* transform: rotate(30deg); */
 }
 .bg-info-grid-container {
   padding-top: 15%;
   padding-bottom: 5%;
   display: grid;
 }
+.phone_and_name_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+.user_phone_number_form {
+  font-size: 24px;
+}
+.phone_hint {
+  color: rgba(0, 0, 0, 0.300000003);
+}
+.user_phone_wrapper {
+  display: flex;
+  justify-content: center;
+}
+#phone {
+  font-size: 24px;
+  background-color: #faf5fe;
+  border-bottom: 1px solid rgb(162, 153, 153);
+}
+.user_name_form {
+  font-size: 24px;
+  border-bottom: 1px solid rgb(162, 153, 153);
+}
+#username {
+  background-color: #faf5fe;
+  font-size: 24px;
+}
 .bg-row {
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 45% 55%;
   column-gap: 5%;
@@ -497,16 +532,15 @@ body {
   letter-spacing: -0.224rem;
   color: #000000;
   font-family: JetBrains Mono, "Source Sans Pro";
+  /* transform: rotate(-30deg); */
+  /* position: relative; */
 }
 .bg-info-title {
   display: grid;
-  border: #000000 2px dashed;
+  /* border: #000000 2px dashed; */
 }
 .bg-info-content {
   font-size: 2.4rem;
-
-  /* overflow: hidden; */
-  border: #a44a4a 2px dashed;
   text-align: justify;
 }
 .bg-line-small-p {

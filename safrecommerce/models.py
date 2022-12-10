@@ -56,6 +56,8 @@ class CustomerOfferModel(models.Model):
     weight = models.DecimalField(max_digits=5, decimal_places=1, default=1.00)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=150.00) 
     time_created = models.DateTimeField(auto_now_add=True, verbose_name="Offer created at:")
+    name = models.CharField(max_length=50, default="")
+    phoneNumber = PhoneNumberField(null=False, blank=True, unique=True)
     class Meta:
         verbose_name = ("Customer's offer")
         verbose_name_plural = ("Customers's offers")

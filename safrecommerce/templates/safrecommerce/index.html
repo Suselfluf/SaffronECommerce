@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Frame 1</title>
-    <link rel="stylesheet" href="{% static 'css/index4.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index6.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
@@ -82,58 +82,16 @@
           </div>
           <div class="bg-info-wrapper">
             <div class="bg-info-grid-container">
+              {%for i in info_blocks%}
               <div class="bg-row">
                 <div class="bg-info-title">
-                  <p class="bg-line-small-p">Small text</p>
+                  <p class="bg-line-small-p">{{i.title}}</p>
                 </div>
                 <div class="bg-info-content">
-                  <p class="bg-line-big-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Assumenda quas magnam cupiditate et dignissimos unde esse
-                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
-                    facilis hic architecto sequi!
-                  </p>
+                  <p class="bg-line-big-p">{{i.description}}</p>
                 </div>
               </div>
-              <div class="bg-row">
-                <div class="bg-info-title">
-                  <p class="bg-line-small-p">Small text</p>
-                </div>
-                <div class="bg-info-content">
-                  <p class="bg-line-big-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Assumenda quas magnam cupiditate et dignissimos unde esse
-                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
-                    facilis hic architecto sequi!
-                  </p>
-                </div>
-              </div>
-              <div class="bg-row">
-                <div class="bg-info-title">
-                  <p class="bg-line-small-p">Small text</p>
-                </div>
-                <div class="bg-info-content">
-                  <p class="bg-line-big-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Assumenda quas magnam cupiditate et dignissimos unde esse
-                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
-                    facilis hic architecto sequi!
-                  </p>
-                </div>
-              </div>
-              <div class="bg-row">
-                <div class="bg-info-title">
-                  <p class="bg-line-small-p">Small text</p>
-                </div>
-                <div class="bg-info-content">
-                  <p class="bg-line-big-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Assumenda quas magnam cupiditate et dignissimos unde esse
-                    officiis, quo ut pariatur, odit expedita nemo ex iusto eaque
-                    facilis hic architecto sequi!
-                  </p>
-                </div>
-              </div>
+              {%endfor%}
             </div>
           </div>
           <div class="cooperation-offer-MP9">
@@ -148,16 +106,33 @@
                 <p class="cooperation-offer-details-BNB">
                   Cooperation Offer Details
                 </p>
-                <p class="cooperation-offer-email-input">
-                  Your Email:
-                  <input
-                    class="email-form-input"
-                    type="email"
-                    name="email"
-                    id="email"
-                    required
-                  />
-                </p>
+                <div class="phone_and_name_wrapper">
+                  <div class="user_phone_number_form">
+                    <div class="user_phone_wrapper">
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phoneNumber"
+                        value="+7"
+                        pattern="\+\[0-9]{4}[0-9]{3}[0-9]{4}"
+                        required
+                      />
+                    </div>
+                    <p class="phone_hint">
+                      *with following pattern : "926-484-7255"
+                    </p>
+                  </div>
+                  <div class="user_name_form">
+                    <input
+                      type="text"
+                      id="username"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                    />
+                  </div>
+                </div>
+
                 <div class="you-can-buy-1-gram-for-200-rubles-G8j">
                   You can buy
                   <div class="weight-form-block">
@@ -197,15 +172,28 @@
                   />
                   Rubles
                 </div>
+                <p class="cooperation-offer-email-input">
+                  Your Email:
+                  <input
+                    class="email-form-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </p>
+                {%for admin_data in contact_info %}
 
                 <button class="buttons-Suh" type="submit">
                   Form the request
                 </button>
                 <p class="bulking-oreder-starts-from-100-grams-Zsq">
-                  Bulking oreder starts from {{prices.minimalBulkWeight}} grams*
+                  Bulk order starts from {{prices.minimalBulkWeight}} grams*
                 </p>
-
-                {%endfor%}
+                <p class="bulking-oreder-starts-from-100-grams-Zsq">
+                  Contact: {{admin_data.phoneNumber}}
+                </p>
+                {%endfor%} {%endfor%}
               </div>
             </form>
           </div>
