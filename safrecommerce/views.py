@@ -16,10 +16,12 @@ def index(request):
     contact_info = ContactInfo.objects.all()
     form = CustomerOfferForm()
     if request.method == "POST":
-        form = CustomerOfferForm(request.POST)
-        print("Printing post:", request.POST)
+        pDict = request.POST.copy() 
+        form = CustomerOfferForm(pDict)
+        print("Printing post:", pDict)
         if form.is_valid():                 # Unfortunately can not provide duplicating phonenumbers within the database, however can serve as protection from sending multiple same data request
             form.save()
+            form = CustomerOfferForm()
             # form.clean()
         else:
             print("Wrong")

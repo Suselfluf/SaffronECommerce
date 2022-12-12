@@ -66,24 +66,90 @@ body {
   vertical-align: top;
 }
 
-.saffron-straight-from-iran-Rm5 {
-  width: 100%;
-  height: 44%;
-  position: absolute;
-  top: 12%;
-  left: 10%;
-  display: grid;
-  grid-template-rows: 200px 200px;
-  /* align-items: cet; */
-  text-align: left;
-  font-size: 20em;
-  grid-row-gap: 5px;
-  text-transform: capitalize;
-  color: #1c0c38;
-  font-family: Anton, "Source Sans Pro";
+@media only screen and (max-device-width: 480px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 40px 40px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 4em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
 }
-.from-Iran {
-  text-align: -webkit-center;
+
+@media only screen and (min-width: 960px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 10em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 15em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 20em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
 }
 .navigation-bars-5Kq {
   display: grid;
@@ -105,6 +171,52 @@ body {
   align-items: center;
 }
 
+@media only screen and (min-width: 960px) {
+  .auto-group-46uh-xZy {
+    font-size: 20px;
+  }
+  /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  .products-module-Rtf {
+    width: 220px;
+  }
+  .header-CV1 {
+    height: 53rem;
+  }
+  .saffronimage-1-hwZ {
+    width: 28.7rem;
+    height: 29.7rem;
+    left: 7%;
+    top: 45%;
+  }
+  .saffron4-1-V6j {
+    width: 20%;
+    height: 20%;
+  }
+  .buttons-x67 {
+    position: absolute;
+    top: 190px;
+    left: 12%;
+  }
+  .auto-group-46uh-xZy {
+    width: 80%;
+    height: 100%;
+    /* padding-left: 20%; */
+    text-align: left;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+}
+
 .buttons-x67 {
   width: 16.1rem;
   height: 40px;
@@ -122,21 +234,18 @@ body {
 }
 
 .text-gVy {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
 }
 
 .text-arF {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
 }
 
 .text-u7q {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
@@ -492,6 +601,37 @@ body {
 }
 .phone_and_name_wrapper {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+.user_phone_number_form {
+  font-size: 24px;
+}
+.phone_hint {
+  display: grid;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.300000003);
+}
+#phone {
+  align-self: center;
+}
+.user_phone_wrapper {
+  display: flex;
+  justify-content: center;
+}
+#phone {
+  font-size: 24px;
+  background-color: #faf5fe;
+  border-bottom: 1px solid rgb(162, 153, 153);
+}
+.user_name_form {
+  font-size: 24px;
+  border-bottom: 1px solid rgb(162, 153, 153);
+  height: 30px;
+}
+#username {
+  background-color: #faf5fe;
+  font-size: 24px;
 }
 .bg-row {
   margin-left: 10%;
@@ -719,13 +859,26 @@ body {
   column-gap: 20px;
   align-content: space-around;
 }
-.auto-group-rbjr-g1y {
-  width: 200%;
-  display: grid;
-  /* grid-template-rows: 1fr 1fr;*/
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  row-gap: 10%;
+
+@media screen and (max-width: 1209px) {
+  .auto-group-rbjr-g1y {
+    width: 200%;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 10%;
+  }
+}
+@media screen and (min-width: 1210px) {
+  .auto-group-rbjr-g1y {
+    width: 200%;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10%;
+  }
 }
 
 .product-1-o6b {
@@ -748,8 +901,6 @@ body {
   top: 0;
   background-size: 100% 117.804%;
   background-position: 0 -10.7rem;
-  border: black 1px dashed;
-  border-radius: 3rem;
 }
 .frame-1-ewM
   .hero-Jm1

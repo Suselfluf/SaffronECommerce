@@ -493,14 +493,18 @@ body {
 .phone_and_name_wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   justify-items: center;
 }
 .user_phone_number_form {
   font-size: 24px;
 }
 .phone_hint {
+  display: grid;
+  justify-content: center;
   color: rgba(0, 0, 0, 0.300000003);
+}
+#phone {
+  align-self: center;
 }
 .user_phone_wrapper {
   display: flex;
@@ -514,6 +518,7 @@ body {
 .user_name_form {
   font-size: 24px;
   border-bottom: 1px solid rgb(162, 153, 153);
+  height: 30px;
 }
 #username {
   background-color: #faf5fe;
@@ -774,7 +779,7 @@ body {
   top: 0;
   background-size: 100% 117.804%;
   background-position: 0 -10.7rem;
-  border: black 1px dashed;
+
   border-radius: 3rem;
 }
 .frame-1-ewM

@@ -3,13 +3,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    {% comment %}
-    <link rel="icon" href="/favicon.ico" />
-    {% endcomment %}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Frame 1</title>
-    <link rel="stylesheet" href="{% static 'css/index6.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
@@ -114,12 +111,12 @@
                         id="phone"
                         name="phoneNumber"
                         value="+7"
-                        pattern="\+\[0-9]{4}[0-9]{3}[0-9]{4}"
+                        pattern="\+[0-9]{4}[0-9]{3}[0-9]{4}"
                         required
                       />
                     </div>
                     <p class="phone_hint">
-                      *with following pattern : "926-484-7255"
+                      *with following pattern : "+79264847255"
                     </p>
                   </div>
                   <div class="user_name_form">
