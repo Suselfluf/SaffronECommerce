@@ -57,6 +57,7 @@ class CustomerOfferModel(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, default=150.00) 
     time_created = models.DateTimeField(auto_now_add=True, verbose_name="Offer created at:")
     name = models.CharField(max_length=50, default="")
+    totalPrice = models.IntegerField()
     phoneNumber = PhoneNumberField(null=False, blank=True, unique=True)
     class Meta:
         verbose_name = ("Customer's offer")

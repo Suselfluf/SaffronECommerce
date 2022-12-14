@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Frame 1</title>
-    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index5.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
@@ -38,9 +38,15 @@
         <div class="header-CV1">
           <div class="navigation-bars-5Kq">
             <div class="auto-group-46uh-xZy">
-              <p class="text-gVy">Saffrons Products</p>
-              <p class="text-arF">Cooperation Offer Details</p>
-              <p class="text-u7q">About the Product</p>
+              <p class="text-gVy">
+                <a href="#productsBlock">Saffrons Products</a>
+              </p>
+              <p class="text-arF">
+                <a href="#BGblock">About the Distributor</a>
+              </p>
+              <p class="text-u7q">
+                <a href="#cooperationBlock">Cooperation Offer Details</a>
+              </p>
             </div>
             <div class="buttons-x67">Cooperation offer</div>
           </div>
@@ -59,6 +65,7 @@
           </div>
         </div>
         <div class="auto-group-iitb-cAf">
+          <a name="productsBlock"></a>
           <div class="products-LD1">
             <div class="auto-group-rbjr-g1y">
               {%for p in products %}
@@ -70,7 +77,7 @@
                   <div class="auto-group-n3nt-NSX">
                     <div class="auto-group-wat5-Vn3">{{p.weightInGr}} Gram</div>
                     <div class="auto-group-kkas-fpw">{{p.weightInSot}} Sot</div>
-                    <div class="rectangle-5-6QT"></div>
+                    <div class="rectangle-5-6QT" onclick={addToOffer({{p.id}})}>Add to Offer</div>
                   </div>
                 </div>
               </div>
@@ -79,6 +86,7 @@
           </div>
           <div class="bg-info-wrapper">
             <div class="bg-info-grid-container">
+              <a name="BGblock"></a>
               {%for i in info_blocks%}
               <div class="bg-row">
                 <div class="bg-info-title">
@@ -98,7 +106,10 @@
             />
             <form action="{% url 'index' %}" method="POST" class="customerForm">
               {% csrf_token %} {%for prices in commercial_pars%}
-              <p id="hiden_price">{{prices.retailPriceForGram}}</p>
+              <p id="hiden_price_retail">{{prices.retailPriceForGram}}</p>
+              <p id="hiden_price_bulk">{{prices.wholesalePriceForGram}}</p>
+              <p id="hiden_weight_bulk">{{prices.minimalBulkWeight}}</p>
+              <a name="cooperationBlock"></a>
               <div class="offer-block-gRR">
                 <p class="cooperation-offer-details-BNB">
                   Cooperation Offer Details
@@ -106,20 +117,26 @@
                 <div class="phone_and_name_wrapper">
                   <div class="user_phone_number_form">
                     <div class="user_phone_wrapper">
-                      <input
+                      <p class="cooperation-offer-email-input">
+                        Your Phone number:
+                        <input
                         type="tel"
                         id="phone"
                         name="phoneNumber"
-                        value="+7"
+                        placeholder="+79264847255"
+                        value
                         pattern="\+[0-9]{4}[0-9]{3}[0-9]{4}"
                         required
                       />
                     </div>
-                    <p class="phone_hint">
+                    {% comment %} <p class="phone_hint">
                       *with following pattern : "+79264847255"
-                    </p>
+                    </p> {% endcomment %}
+                  </p>
                   </div>
                   <div class="user_name_form">
+                    <p class="cooperation-offer-name-input">
+                      Your name: 
                     <input
                       type="text"
                       id="username"
@@ -127,6 +144,7 @@
                       placeholder="Your name"
                       required
                     />
+                    </p>
                   </div>
                 </div>
 
@@ -147,6 +165,7 @@
                       min="0.9"
                       step="0.1"
                       max="1000"
+                      oninput="showResult(value)"
                       value="{{prices.minumalOfferWeight}}"
                     />
                     <img
@@ -180,8 +199,44 @@
                   />
                 </p>
                 {%for admin_data in contact_info %}
-
-                <button class="buttons-Suh" type="submit">
+                <input
+                type="text"
+                name="description"
+                id="Brass_Grinder_and_Velvet_Pack"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="description"
+                id="Diamond_Pack"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="description"
+                id="Brass_Grinder_and_Velvet_Pack_Deluxe"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="description"
+                id="Khatam_Pack"
+                required
+                readonly
+              />
+              <div class="totalCostWrapper">Total Cost:
+                <input
+                type="text"
+                name="totalPrice"
+                id="totalPrice"
+                required
+                oninput
+                readonly
+              /></div>
+                <button class="buttons-Suh" type="submit" onclick={validate()}>
                   Form the request
                 </button>
                 <p class="bulking-oreder-starts-from-100-grams-Zsq">
@@ -217,6 +272,6 @@
         </div>
       </div>
     </div>
-    <script src="{% static 'Js/index.js' %}"></script>
+    <script src="{% static 'Js/index2.js' %}"></script>
   </body>
 </html>

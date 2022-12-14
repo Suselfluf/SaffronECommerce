@@ -15,6 +15,10 @@ input {
 body {
   width: 100%;
 }
+a {
+  text-decoration: none;
+  color: #1c0c38;
+}
 .frame-1-ewM {
   width: 100%;
   height: 100%;
@@ -66,24 +70,253 @@ body {
   vertical-align: top;
 }
 
-.saffron-straight-from-iran-Rm5 {
-  width: 100%;
-  height: 44%;
-  position: absolute;
-  top: 12%;
-  left: 10%;
-  display: grid;
-  grid-template-rows: 200px 200px;
-  /* align-items: cet; */
-  text-align: left;
-  font-size: 20em;
-  grid-row-gap: 5px;
-  text-transform: capitalize;
-  color: #1c0c38;
-  font-family: Anton, "Source Sans Pro";
+@media only screen and (max-device-width: 550px) {
+  .products-LD1 {
+    grid-template-columns: 1fr !important;
+  }
+  .auto-group-rbjr-g1y {
+    width: 550px !important;
+    /* row-gap: 0 !important; */
+  }
+  .navigation-bars-5Kq {
+    grid-template-columns: 100% !important;
+    justify-items: end !important;
+    padding: 10px 0 0 0 !important;
+    margin-right: 40px !important;
+    width: 95% !important;
+  }
+  .product-1-o6b {
+    height: 440px !important;
+    display: grid;
+    justify-items: center !important;
+    align-self: center !important;
+    row-gap: 0;
+  }
+  .image-5-wTh {
+    width: 280px !important;
+    height: 360px !important;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+  }
+  .products-module-Rtf {
+    width: 280px !important;
+    height: 80px !important;
+    position: initial !important;
+    display: grid !important;
+    grid-template-rows: 0% 0% 30% !important;
+    padding: 0 !important;
+  }
+  .product-description-XRu {
+    width: 200px;
+    display: block !important;
+    padding-top: 5px !important;
+    font-size: 14px !important;
+    padding-left: 10px !important;
+  }
+  .rub-dzj {
+    font-size: 14px !important;
+    padding-top: 5px !important;
+    padding-left: 10px !important;
+  }
+  .auto-group-n3nt-NSX {
+    column-gap: 1rem !important;
+    justify-content: center;
+  }
+  .auto-group-wat5-Vn3 {
+    font-size: 11px !important;
+    height: 30px !important;
+    width: 6rem !important;
+  }
+  .auto-group-kkas-fpw {
+    font-size: 11px !important;
+    height: 30px !important;
+    width: 6rem !important;
+  }
+  .rectangle-5-6QT {
+    font-size: 11px !important;
+    height: 30px !important;
+    width: 6rem !important;
+  }
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 40px 40px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 4em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
+
+  .bg-info-wrapper {
+    margin-top: 500px !important;
+  }
+  .bg-row {
+    font-size: 14px !important;
+    grid-template-columns: 1fr !important;
+    grid-row-gap: 20px !important;
+    margin-left: 25% !important;
+    margin-right: 25% !important;
+  }
+  .bg-info-content {
+    font-size: 12px !important;
+  }
+  .bg-line-big-p {
+    text-align: justify !important;
+  }
+
+  .offer-block-gRR {
+    border-radius: 5rem !important;
+  }
+  .cooperation-offer-details-BNB {
+    font-size: 18px !important;
+  }
+  .phone_and_name_wrapper {
+    grid-template-columns: 100% !important;
+
+    column-gap: 10px !important;
+    justify-items: start !important;
+  }
+  .user_phone_number_form {
+    font-size: 14px !important;
+  }
+  .user_name_form {
+    font-size: 14px !important;
+    height: 16px !important;
+  }
+  #phone {
+    font-size: 14px !important;
+  }
+  #username {
+    font-size: 14px !important;
+    text-align: center !important;
+  }
+  .you-can-buy-1-gram-for-200-rubles-G8j {
+    font-size: 14px !important;
+    letter-spacing: -0.2rem !important;
+    margin-bottom: 10px !important;
+  }
+  .weight-form-input {
+    font-size: 20px !important;
+    width: 50px;
+  }
+  .price-form-input {
+    font-size: 20px !important;
+  }
+  .icon-up {
+    width: 25px !important;
+  }
+  .icon-down {
+    width: 25px !important;
+  }
+  .cooperation-offer-email-input {
+    font-size: 14px !important;
+    letter-spacing: normal !important;
+    margin-bottom: 20px !important;
+  }
+  .cooperation-offer-name-input {
+    margin: 0rem 0rem 5.1rem 0rem;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px !important;
+    letter-spacing: normal !important;
+    margin-bottom: 20px !important;
+  }
+  .email-form-input {
+    font-size: 14px !important;
+    width: 200px;
+  }
+  .buttons-Suh {
+    width: calc(100% - 12.2913rem) !important;
+    height: 3rem !important;
+    font-size: 16px !important;
+  }
+  .bulking-oreder-starts-from-100-grams-Zsq {
+    font-size: 16px !important;
+    letter-spacing: -0.15rem !important;
+  }
 }
-.from-Iran {
-  text-align: -webkit-center;
+
+@media only screen and (min-width: 960px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 10em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 15em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .saffron-straight-from-iran-Rm5 {
+    width: 100%;
+    height: 44%;
+    position: absolute;
+    top: 12%;
+    left: 10%;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    /* align-items: cet; */
+    text-align: left;
+    font-size: 20em;
+    grid-row-gap: 5px;
+    text-transform: capitalize;
+    color: #1c0c38;
+    font-family: Anton, "Source Sans Pro";
+  }
+  .from-Iran {
+    text-align: -webkit-center;
+  }
 }
 .navigation-bars-5Kq {
   display: grid;
@@ -105,6 +338,53 @@ body {
   align-items: center;
 }
 
+@media only screen and (min-width: 960px) {
+  .auto-group-46uh-xZy {
+    font-size: 20px;
+  }
+  /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  .products-module-Rtf {
+    width: 220px;
+  }
+  .header-CV1 {
+    height: 53rem;
+  }
+  .saffronimage-1-hwZ {
+    width: 32.7rem;
+    height: 32.7rem;
+    left: 10%;
+    top: 45%;
+  }
+  .saffron4-1-V6j {
+    width: 20%;
+    height: 20%;
+  }
+  .buttons-x67 {
+    position: absolute;
+    top: 190px;
+    left: 12%;
+  }
+  .auto-group-46uh-xZy {
+    width: 80%;
+    height: 100%;
+    /* padding-left: 20%; */
+    text-align: left;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: end !important;
+  }
+}
+
 .buttons-x67 {
   width: 16.1rem;
   height: 40px;
@@ -122,21 +402,18 @@ body {
 }
 
 .text-gVy {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
 }
 
 .text-arF {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
 }
 
 .text-u7q {
-  font-size: 20px;
   color: #282828;
   font-family: Actor, "Source Sans Pro";
   white-space: nowrap;
@@ -228,8 +505,28 @@ body {
   white-space: nowrap;
   flex-shrink: 0;
 }
+.cooperation-offer-name-input {
+  margin: 0rem 0rem 5.1rem 0rem;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.224rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
 
-#hiden_price {
+#hiden_price_retail {
+  display: none;
+}
+#hiden_price_bulk {
+  display: none;
+}
+#hiden_weight_bulk {
   display: none;
 }
 
@@ -492,7 +789,7 @@ body {
 }
 .phone_and_name_wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-items: center;
 }
 .user_phone_number_form {
@@ -517,12 +814,12 @@ body {
 }
 .user_name_form {
   font-size: 24px;
-  border-bottom: 1px solid rgb(162, 153, 153);
   height: 30px;
 }
 #username {
   background-color: #faf5fe;
   font-size: 24px;
+  border-bottom: 1px solid rgb(162, 153, 153);
 }
 .bg-row {
   margin-left: 10%;
@@ -750,13 +1047,116 @@ body {
   column-gap: 20px;
   align-content: space-around;
 }
-.auto-group-rbjr-g1y {
-  width: 200%;
-  display: grid;
-  /* grid-template-rows: 1fr 1fr;*/
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  row-gap: 10%;
+
+@media screen and (max-width: 1209px) {
+  .auto-group-rbjr-g1y {
+    width: 200%;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 10%;
+  }
+}
+@media screen and (min-width: 1210px) {
+  .auto-group-rbjr-g1y {
+    width: 200%;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10%;
+  }
+  #Brass_Grinder_and_Velvet_Pack {
+    width: 800px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
+  #Diamond_Pack {
+    width: 800px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
+  #Brass_Grinder_and_Velvet_Pack_Deluxe {
+    width: 800px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
+  #Khatam_Pack {
+    width: 800px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
+  #totalPrice {
+    width: 400px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
+  .totalCostWrapper {
+    width: 800px;
+    margin: 0rem 0rem 5.1rem 0rem;
+    text-align: left;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.224rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    height: 30px;
+    background-color: #faf5fe;
+  }
 }
 
 .product-1-o6b {
@@ -779,8 +1179,6 @@ body {
   top: 0;
   background-size: 100% 117.804%;
   background-position: 0 -10.7rem;
-
-  border-radius: 3rem;
 }
 .frame-1-ewM
   .hero-Jm1
@@ -927,6 +1325,16 @@ body {
   background-color: #ffffff;
   border-radius: 1.2rem;
   flex-shrink: 0;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.14rem;
+  color: #000000;
+  font-family: JetBrains Mono, "Source Sans Pro";
+  white-space: nowrap;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .product-2-kV1 {
