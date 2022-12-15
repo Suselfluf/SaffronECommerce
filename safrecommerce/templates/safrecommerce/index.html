@@ -1,0 +1,287 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>Frame 1</title>
+    <link rel="stylesheet" href="{% static 'css/index5.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Inter%3A500"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Anton%3A400"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins%3A700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Actor%3A400"
+    />
+  </head>
+  <body>
+    <div class="frame-1-ewM">
+      <div class="hero-Jm1">
+        <div class="header-CV1">
+          <div class="navigation-bars-5Kq">
+            <div class="auto-group-46uh-xZy">
+              <p class="text-gVy">
+                <a href="#productsBlock">Saffrons Products</a>
+              </p>
+              <p class="text-arF">
+                <a href="#BGblock">About the Distributor</a>
+              </p>
+              <p class="text-u7q">
+                <a href="#cooperationBlock">Cooperation Offer Details</a>
+              </p>
+            </div>
+            <div class="buttons-x67">Cooperation offer</div>
+          </div>
+          <img
+            class="saffronimage-1-hwZ"
+            src="{% static 'assets/saffronimage-1.png' %}"
+          />
+          <img
+            class="saffron4-1-V6j"
+            src="{% static '/assets/left_top_saffron.png' %}"
+          />
+
+          <div class="saffron-straight-from-iran-Rm5">
+            <div>Saffron straight</div>
+            <div class="from-Iran">from Iran</div>
+          </div>
+        </div>
+        <div class="auto-group-iitb-cAf">
+          <a name="productsBlock"></a>
+          <div class="products-LD1">
+            <div class="auto-group-rbjr-g1y">
+              {%for p in products %}
+              <div class="product-1-o6b">
+                <img class="image-5-wTh" src="{{ p.image.url }}" />
+                <div class="products-module-Rtf">
+                  <div class="product-description-XRu">{{p.title}}</div>
+                  <div class="rub-dzj">{{p.price}} RUB</div>
+                  <div class="auto-group-n3nt-NSX">
+                    <div class="auto-group-wat5-Vn3">{{p.weightInGr}} Gram</div>
+                    <div class="auto-group-kkas-fpw">{{p.weightInSot}} Sot</div>
+                    <div class="rectangle-5-6QT" onclick={addToOffer({{p.id}})}>Add to Offer</div>
+                  </div>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+          <div class="bg-info-wrapper">
+            <div class="bg-info-grid-container">
+              <a name="BGblock"></a>
+              {%for i in info_blocks%}
+              <div class="bg-row">
+                <div class="bg-info-title">
+                  <p class="bg-line-small-p">{{i.title}}</p>
+                </div>
+                <div class="bg-info-content">
+                  <p class="bg-line-big-p">{{i.description}}</p>
+                </div>
+              </div>
+              {%endfor%}
+            </div>
+          </div>
+          <div class="cooperation-offer-MP9">
+            <img
+              class="saffron3-1-cLK"
+              src="{% static '/assets/saffron3-1.png' %}"
+            />
+            <form action="{% url 'index' %}" method="POST" class="customerForm">
+              {% csrf_token %} {%for prices in commercial_pars%}
+              <p id="hiden_price_retail">{{prices.retailPriceForGram}}</p>
+              <p id="hiden_price_bulk">{{prices.wholesalePriceForGram}}</p>
+              <p id="hiden_weight_bulk">{{prices.minimalBulkWeight}}</p>
+              <a name="cooperationBlock"></a>
+              <div class="offer-block-gRR">
+                <p class="cooperation-offer-details-BNB">
+                  Cooperation Offer Details
+                </p>
+                <div class="phone_and_name_wrapper">
+                  <div class="user_phone_number_form">
+                    <div class="user_phone_wrapper">
+                      <p class="cooperation-offer-email-input">
+                        Your Phone number:
+                        <input
+                        type="tel"
+                        id="phone"
+                        name="phoneNumber"
+                        placeholder="+79264847255"
+                        value
+                        pattern="\+[0-9]{4}[0-9]{3}[0-9]{4}"
+                        required
+                      />
+                    </div>
+                    
+                  </p>
+                  </div>
+                  <div class="user_name_form">
+                    <p class="cooperation-offer-name-input">
+                      Your name: 
+                    <input
+                      type="text"
+                      id="username"
+                      name="name"
+                      placeholder="Your name"
+                      required
+                    />
+                    </p>
+                  </div>
+                </div>
+
+                <div class="you-can-buy-1-gram-for-200-rubles-G8j">
+                  You can buy
+                  <div class="weight-form-block">
+                    <img
+                      class="icon-up"
+                      src="{% static '/assets/Icon-Up.png' %}"
+                      width="40"
+                      onclick="myFunction('Up')"
+                    />
+                    <input
+                      class="weight-form-input"
+                      type="number"
+                      id="weight"
+                      name="weight"
+                      min="0.9"
+                      step="0.1"
+                      max="1000"
+                      oninput="showResult(value)"
+                      value="{{prices.minumalOfferWeight}}"
+                    />
+                    <img
+                      class="icon-down"
+                      src="{% static '/assets/Icon-Down.png' %}"
+                      width="40"
+                      onclick="myFunction('Down')"
+                    />
+                  </div>
+
+                  Gram for
+                  <input
+                    class="price-form-input"
+                    type="price"
+                    id="price"
+                    name="price"
+                    size="7"
+                    value="{{prices.retailPriceForGram}}"
+                    readonly
+                  />
+                  Rubles
+                </div>
+                <p class="cooperation-offer-email-input">
+                  Your Email:
+                  <input
+                    class="email-form-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </p>
+                {%for admin_data in contact_info %}
+                <div id="prductListWrapper">
+                  <p id="productListtitle">
+                    Product list
+                  </p>
+                <input
+                type="text"
+                name="Brass_Grinder_and_Velvet_Pack"
+                id="Brass_Grinder_and_Velvet_Pack"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="Diamond_Pack"
+                id="Diamond_Pack"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="description"
+                id="list_of_products"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="Brass_Grinder_and_Velvet_Pack_Deluxe"
+                id="Brass_Grinder_and_Velvet_Pack_Deluxe"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="Khatam_Pack"
+                id="Khatam_Pack"
+                required
+                readonly
+              />
+              </div>
+              <div class="totalCostWrapper">Total Cost:
+                <input
+                type="text"
+                name="totalPrice"
+                id="totalPrice"
+                required
+                oninput
+                readonly
+              /></div>
+                <button class="buttons-Suh" type="submit" onclick={validate()}>
+                  Form the request
+                </button>
+                <p class="bulking-oreder-starts-from-100-grams-Zsq">
+                  Bulk order starts from {{prices.minimalBulkWeight}} grams*
+                </p>
+                <p class="bulking-oreder-starts-from-100-grams-Zsq">
+                  Contact: {{admin_data.phoneNumber}}
+                </p>
+                {%endfor%} {%endfor%}
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer-t27">
+          <div class="telegram-Qm9">
+            {%for admin_data in contact_info %}
+            <div class="ethanshagaei-NCB">{{admin_data.telegramm}}</div>
+            <img
+              class="icons8-app-120-1-6P5"
+              src="{% static '/assets/icons8-app-120-1.png' %}"
+            />
+          </div>
+          <div class="contact-number-c6X">
+            <div class="item-7-926-484-72-55-ZnT">
+              {{admin_data.phoneNumber}}
+            </div>
+            <img
+              class="icons8-phone-96-1-t43"
+              src="{% static '/assets/phone_icon.png' %}"
+            />
+          </div>
+          {%endfor%}
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'Js/index2.js' %}"></script>
+  </body>
+</html>
