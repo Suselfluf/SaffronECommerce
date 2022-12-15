@@ -253,6 +253,85 @@ a {
     font-size: 16px !important;
     letter-spacing: -0.15rem !important;
   }
+  #Brass_Grinder_and_Velvet_Pack {
+    display: none;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #faf5fe;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px !important;
+    margin-top: 20px !important;
+    width: 300px;
+  }
+  #Diamond_Pack {
+    display: none;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #faf5fe;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px !important;
+    margin-top: 20px !important;
+    width: 300px;
+  }
+  #list_of_products {
+    display: none;
+  }
+  #Brass_Grinder_and_Velvet_Pack_Deluxe {
+    display: none;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #faf5fe;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px !important;
+    margin-top: 20px !important;
+    width: 300px;
+  }
+  #Khatam_Pack {
+    display: none;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+    white-space: nowrap;
+    flex-shrink: 0;
+    background-color: #faf5fe;
+    grid-template-columns: 1fr 1fr;
+    font-size: 10px !important;
+    margin-top: 20px !important;
+    width: 300px;
+  }
+  #prductListWrapper {
+    display: none;
+    width: 300px;
+    border: #6b2a9d 1px solid;
+  }
+  #productListtitle {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
+  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -293,8 +372,92 @@ a {
     color: #1c0c38;
     font-family: Anton, "Source Sans Pro";
   }
+  .totalCostWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
   .from-Iran {
     text-align: -webkit-center;
+  }
+  #Brass_Grinder_and_Velvet_Pack {
+    display: none;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.1rem !important;
+    color: #000000 !important;
+    font-family: JetBrains Mono, "Source Sans Pro" !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    background-color: #faf5fe !important;
+    grid-template-columns: 1fr 1fr !important;
+    font-size: 19px !important;
+    margin-top: 20px !important;
+    width: 600px !important;
+  }
+  #Diamond_Pack {
+    display: none;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.1rem !important;
+    color: #000000 !important;
+    font-family: JetBrains Mono, "Source Sans Pro" !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    background-color: #faf5fe !important;
+    grid-template-columns: 1fr 1fr !important;
+    font-size: 19px !important;
+    margin-top: 20px !important;
+    width: 600px !important;
+  }
+  #list_of_products {
+    display: none;
+  }
+  #Brass_Grinder_and_Velvet_Pack_Deluxe {
+    display: none;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.1rem !important;
+    color: #000000 !important;
+    font-family: JetBrains Mono, "Source Sans Pro" !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    background-color: #faf5fe !important;
+    grid-template-columns: 1fr 1fr !important;
+    font-size: 19px !important;
+    margin-top: 20px !important;
+    width: 600px !important;
+  }
+  #Khatam_Pack {
+    display: none;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.1rem !important;
+    color: #000000 !important;
+    font-family: JetBrains Mono, "Source Sans Pro" !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    background-color: #faf5fe !important;
+    grid-template-columns: 1fr 1fr !important;
+    font-size: 19px !important;
+    margin-top: 20px !important;
+    width: 600px !important;
+  }
+  #prductListWrapper {
+    display: none;
+    width: 600px;
+    border: #6b2a9d 1px solid;
+  }
+  #productListtitle {
+    display: block;
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.1rem;
+    color: #000000;
+    font-family: JetBrains Mono, "Source Sans Pro";
   }
 }
 @media only screen and (min-width: 2000px) {
@@ -1059,6 +1222,9 @@ a {
   }
 }
 @media screen and (min-width: 1210px) {
+  #productListtitle {
+    font-weight: 1000;
+  }
   .auto-group-rbjr-g1y {
     width: 200%;
     display: grid;
@@ -1069,7 +1235,6 @@ a {
   }
   #Brass_Grinder_and_Velvet_Pack {
     width: 800px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;
@@ -1084,7 +1249,6 @@ a {
   }
   #Diamond_Pack {
     width: 800px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;
@@ -1099,7 +1263,6 @@ a {
   }
   #Brass_Grinder_and_Velvet_Pack_Deluxe {
     width: 800px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;
@@ -1114,7 +1277,6 @@ a {
   }
   #Khatam_Pack {
     width: 800px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;
@@ -1129,7 +1291,6 @@ a {
   }
   #totalPrice {
     width: 400px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;
@@ -1144,7 +1305,6 @@ a {
   }
   .totalCostWrapper {
     width: 800px;
-    margin: 0rem 0rem 5.1rem 0rem;
     text-align: left;
     font-size: 3.2rem;
     font-weight: 700;

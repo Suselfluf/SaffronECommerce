@@ -1,8 +1,12 @@
 var productsArray = [];
 let costElement = document.getElementById("hiden_price_retail").innerHTML;
 let totalPriceElement = document.getElementById("totalPrice");
-totalPriceElement.value = costElement;
+
 var res = 0;
+let priceEstimate = (document.getElementById("price").value =
+  Number(document.getElementById("hiden_price_bulk").innerHTML) *
+  Number(document.getElementById("hiden_weight_bulk").innerHTML));
+totalPriceElement.value = priceEstimate;
 function myFunction(operation) {
   let costElement = document.getElementById("hiden_price_retail").innerHTML;
   let weihgtElement = parseFloat(document.getElementById("weight").value);
@@ -57,8 +61,6 @@ function increaseWeight(currentSateWeight, currentStateCost, weightStepState) {
 function decreaseWeight(currentSateWeight, currentStateCost, weightStepState) {
   let minBulk = document.getElementById("hiden_weight_bulk").innerHTML;
   let bulkPrice = document.getElementById("hiden_price_bulk").innerHTML;
-  let bulkStep = Number(bulkPrice) / 10;
-  let retailStep = Number(currentStateCost) / 10;
   if (currentSateWeight == 0.0) {
     return (document.getElementById("weight").value = currentSateWeight);
   }
@@ -126,39 +128,50 @@ function updateOfferWithproduct(product, price) {
 
   let sum = updateUiWithProductList();
   let arr = [];
+  let stringofProducts = [];
   let finalSum = 0;
   for (i of productsArray) {
     arr.push(i.price);
+    stringofProducts.push(i.key, i.volume);
   }
-  arr;
+
   arr.forEach((element) => {
     finalSum += element;
   });
 
+  let description = (document.getElementById("list_of_products").value =
+    stringofProducts.join(","));
+  console.log(description);
   totalPriceElement.value =
     Number(document.getElementById("price").value) + Number(finalSum);
 }
 
 function updateUiWithProductList() {
+  document.getElementById("prductListWrapper").style.display = "grid";
   for (i of productsArray) {
     switch (i.key) {
       case "Brass Grinder and Velvet Pack":
         document.getElementById(
           "Brass_Grinder_and_Velvet_Pack"
         ).value = `${i.key} - ${i.volume} boxes for ${i.price}`;
+        document.getElementById("Brass_Grinder_and_Velvet_Pack").style.display =
+          "block";
         res += i.priceForOne;
         break;
       case "Diamond Pack":
         document.getElementById(
           "Diamond_Pack"
         ).value = `${i.key} - ${i.volume} boxes for ${i.price}`;
-
+        document.getElementById("Diamond_Pack").style.display = "block";
         res += i.priceForOne;
         break;
       case "Brass Grinder and Velvet Pack - Deluxe":
         document.getElementById(
           "Brass_Grinder_and_Velvet_Pack_Deluxe"
         ).value = `${i.key} - ${i.volume} boxes for ${i.price}`;
+        document.getElementById(
+          "Brass_Grinder_and_Velvet_Pack_Deluxe"
+        ).style.display = "block";
 
         res += i.priceForOne;
 
@@ -167,6 +180,7 @@ function updateUiWithProductList() {
         document.getElementById(
           "Khatam_Pack"
         ).value = `${i.key} - ${i.volume} boxes for ${i.price}`;
+        document.getElementById("Khatam_Pack").style.display = "block";
         res += i.priceForOne;
         break;
     }

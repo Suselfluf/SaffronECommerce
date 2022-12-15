@@ -129,9 +129,7 @@
                         required
                       />
                     </div>
-                    {% comment %} <p class="phone_hint">
-                      *with following pattern : "+79264847255"
-                    </p> {% endcomment %}
+                    
                   </p>
                   </div>
                   <div class="user_name_form">
@@ -199,16 +197,20 @@
                   />
                 </p>
                 {%for admin_data in contact_info %}
+                <div id="prductListWrapper">
+                  <p id="productListtitle">
+                    Product list
+                  </p>
                 <input
                 type="text"
-                name="description"
+                name="Brass_Grinder_and_Velvet_Pack"
                 id="Brass_Grinder_and_Velvet_Pack"
                 required
                 readonly
               />
               <input
                 type="text"
-                name="description"
+                name="Diamond_Pack"
                 id="Diamond_Pack"
                 required
                 readonly
@@ -216,17 +218,25 @@
               <input
                 type="text"
                 name="description"
+                id="list_of_products"
+                required
+                readonly
+              />
+              <input
+                type="text"
+                name="Brass_Grinder_and_Velvet_Pack_Deluxe"
                 id="Brass_Grinder_and_Velvet_Pack_Deluxe"
                 required
                 readonly
               />
               <input
                 type="text"
-                name="description"
+                name="Khatam_Pack"
                 id="Khatam_Pack"
                 required
                 readonly
               />
+              </div>
               <div class="totalCostWrapper">Total Cost:
                 <input
                 type="text"
