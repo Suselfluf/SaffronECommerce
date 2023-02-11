@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <title>Frame 1</title>
-    <link rel="stylesheet" href="{% static 'css/index5.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=JetBrains+Mono%3A400%2C700"
@@ -48,15 +48,17 @@
                 <a href="#cooperationBlock">Cooperation Offer Details</a>
               </p>
             </div>
-            <div class="buttons-x67">Cooperation offer</div>
+            {% comment %} <div class="buttons-x67" ><a href="#cooperationBlock">Cooperation offer</a></div> {% endcomment %}
           </div>
           <img
             class="saffronimage-1-hwZ"
             src="{% static 'assets/saffronimage-1.png' %}"
+            loading="lazy"
           />
           <img
             class="saffron4-1-V6j"
             src="{% static '/assets/left_top_saffron.png' %}"
+            loading="lazy"
           />
 
           <div class="saffron-straight-from-iran-Rm5">
@@ -70,21 +72,25 @@
             <div class="auto-group-rbjr-g1y">
               {%for p in products %}
               <div class="product-1-o6b">
-                <img class="image-5-wTh" src="{{ p.image.url }}" />
+                <img class="image-5-wTh" src="{{ p.image.url }}" loading="lazy"/>
                 <div class="products-module-Rtf">
                   <div class="product-description-XRu">{{p.title}}</div>
                   <div class="rub-dzj">{{p.price}} RUB</div>
                   <div class="auto-group-n3nt-NSX">
                     <div class="auto-group-wat5-Vn3">{{p.weightInGr}} Gram</div>
                     <div class="auto-group-kkas-fpw">{{p.weightInSot}} Sot</div>
-                    <div class="rectangle-5-6QT" onclick={addToOffer({{p.id}})}>Add to Offer</div>
+                    <div class="rectangle-5-6QT" onclick={addToOffer({{p.id}})}><img
+                      class="icons_buy"
+                      src="{% static '/assets/buy.png' %}"
+                      loading="lazy"
+                    /></div>
                   </div>
                 </div>
               </div>
               {%endfor%}
             </div>
           </div>
-          <div class="bg-info-wrapper">
+          {% comment %} <div class="bg-info-wrapper">
             <div class="bg-info-grid-container">
               <a name="BGblock"></a>
               {%for i in info_blocks%}
@@ -98,12 +104,12 @@
               </div>
               {%endfor%}
             </div>
-          </div>
+          </div> {% endcomment %}
           <div class="cooperation-offer-MP9">
-            <img
+            {% comment %} <img
               class="saffron3-1-cLK"
               src="{% static '/assets/saffron3-1.png' %}"
-            />
+            /> {% endcomment %}
             <form action="{% url 'index' %}" method="POST" class="customerForm">
               {% csrf_token %} {%for prices in commercial_pars%}
               <p id="hiden_price_retail">{{prices.retailPriceForGram}}</p>
@@ -154,6 +160,7 @@
                       src="{% static '/assets/Icon-Up.png' %}"
                       width="40"
                       onclick="myFunction('Up')"
+                      loading="lazy"
                     />
                     <input
                       class="weight-form-input"
@@ -171,6 +178,7 @@
                       src="{% static '/assets/Icon-Down.png' %}"
                       width="40"
                       onclick="myFunction('Down')"
+                      loading="lazy"
                     />
                   </div>
 
@@ -237,7 +245,7 @@
                 readonly
               />
               </div>
-              <div class="totalCostWrapper">Total Cost:
+              <div class="totalCostWrapper"><p>Total Cost</p>
                 <input
                 type="text"
                 name="totalPrice"
@@ -267,6 +275,7 @@
             <img
               class="icons8-app-120-1-6P5"
               src="{% static '/assets/icons8-app-120-1.png' %}"
+              loading="lazy"
             />
           </div>
           <div class="contact-number-c6X">
@@ -276,6 +285,7 @@
             <img
               class="icons8-phone-96-1-t43"
               src="{% static '/assets/phone_icon.png' %}"
+              loading="lazy"
             />
           </div>
           {%endfor%}

@@ -34,7 +34,6 @@ class CustomerOfferAdmin(admin.ModelAdmin):
     
     list_display = ('id', 'name', 'phoneNumber', 'email','description','weight','totalPrice', 'price', 'time_created', )
     search_fields = ('email','time_created','price', 'totalPrice')
-    # list_editable = ('name','description')
     list_filter = ('id','time_created','price','weight', 'totalPrice')
     
 admin.site.register(SaffronProducts, SaffrProductsAdmin)

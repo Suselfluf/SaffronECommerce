@@ -51,7 +51,7 @@ class CommercialOfferParameeters(models.Model):
     
 class CustomerOfferModel(models.Model):
     
-    email = models.EmailField(max_length=254)           ##Make this field required to fill in form
+    email = models.EmailField(max_length=254)           
     description = models.TextField(max_length=400, blank=True)
     weight = models.DecimalField(max_digits=5, decimal_places=1, default=1.00)
     price = models.DecimalField(max_digits=10, decimal_places=2, default=150.00) 

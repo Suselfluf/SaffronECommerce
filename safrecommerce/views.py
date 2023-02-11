@@ -17,7 +17,6 @@ def index(request):
         if form.is_valid():                 # Unfortunately can not provide duplicating phonenumbers within the database, however can serve as protection from sending multiple same data request
             form.save()
             form = CustomerOfferForm()
-            form.clean()
         else:
             print("Wrong")
        
