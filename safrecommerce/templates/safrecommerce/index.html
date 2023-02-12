@@ -39,13 +39,13 @@
           <div class="navigation-bars-5Kq">
             <div class="auto-group-46uh-xZy">
               <p class="text-gVy">
-                <a href="#productsBlock">Saffrons Products</a>
-              </p>
-              <p class="text-arF">
-                <a href="#BGblock">About the Distributor</a>
+                <a href="#productsBlock">Products</a>
               </p>
               <p class="text-u7q">
-                <a href="#cooperationBlock">Cooperation Offer Details</a>
+                <a href="#cooperationBlock">Cooperation</a>
+              </p>
+              <p class="order-sample">
+                Order Sample
               </p>
             </div>
             {% comment %} <div class="buttons-x67" ><a href="#cooperationBlock">Cooperation offer</a></div> {% endcomment %}
@@ -66,6 +66,11 @@
             <div class="from-Iran">from Iran</div>
           </div>
         </div>
+        
+        {% comment %} <div class="modal-order-sample">
+          <h1>Order Sample Modal Window</h1>
+        </div> {% endcomment %}
+
         <div class="auto-group-iitb-cAf">
           <a name="productsBlock"></a>
           <div class="products-LD1">
@@ -106,10 +111,10 @@
             </div>
           </div> {% endcomment %}
           <div class="cooperation-offer-MP9">
-            {% comment %} <img
+           <img
               class="saffron3-1-cLK"
               src="{% static '/assets/saffron3-1.png' %}"
-            /> {% endcomment %}
+            /> 
             <form action="{% url 'index' %}" method="POST" class="customerForm">
               {% csrf_token %} {%for prices in commercial_pars%}
               <p id="hiden_price_retail">{{prices.retailPriceForGram}}</p>
@@ -245,7 +250,7 @@
                 readonly
               />
               </div>
-              <div class="totalCostWrapper"><p>Total Cost</p>
+              <div class="totalCostWrapper"><p id="totalCostP">Total Cost</p>
                 <input
                 type="text"
                 name="totalPrice"

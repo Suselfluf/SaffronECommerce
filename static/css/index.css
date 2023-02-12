@@ -75,7 +75,31 @@ a {
   vertical-align: top;
 }
 
+.order-sample {
+  border: 1px solid #fbdcfa;
+  background-color: #752525;
+  border-radius: 5px;
+  color: rgb(243, 231, 231);
+  width: 150px;
+  height: 35px;
+  display: grid;
+  align-items: center;
+}
 @media only screen and (max-width: 550px) {
+  .saffron3-1-cLK {
+    object-fit: cover;
+    justify-self: end;
+  }
+  .order-sample {
+    border: 1px solid #fbdcfa;
+    background-color: #752525;
+    color: rgb(217, 207, 207);
+    width: 80px;
+    height: 25px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+  }
   .cooperation-offer-details-BNB {
     font-size: 14px !important;
   }
@@ -311,27 +335,42 @@ a {
   }
 }
 @media only screen and (min-width: 1440px) {
+  .saffronimage-1-hwZ {
+    left: 23%;
+  }
+  .navigation-bars-5Kq {
+    grid-template-columns: 72%;
+  }
+  .auto-group-46uh-xZy {
+    grid-column-gap: 40px;
+    font-size: 20px;
+  }
   .saffron-straight-from-iran-Rm5 {
     /* width: 100%; */
     height: 44%;
     position: absolute;
     top: 12%;
-    left: 10%;
+    left: 20%;
     display: grid;
     grid-template-rows: 200px 200px;
     /* align-items: cet; */
     text-align: left;
-    font-size: 15em;
+    font-size: 15em !important;
     grid-row-gap: 5px;
     text-transform: capitalize;
     color: #1c0c38;
     font-family: Anton, "Source Sans Pro";
   }
 }
+
 @media only screen and (max-width: 1440px) {
   /* .cooperation-offer-MP9 {
     margin-top: 25% !important;
   } */
+  .auto-group-46uh-xZy {
+    grid-column-gap: 40px;
+    font-size: 20px;
+  }
   .saffron-straight-from-iran-Rm5 {
     /* width: 100%; */
     height: 44%;
@@ -342,7 +381,7 @@ a {
     grid-template-rows: 200px 200px;
     /* align-items: cet; */
     text-align: left;
-    font-size: 15em;
+    font-size: 14em;
     grid-row-gap: 5px;
     text-transform: capitalize;
     color: #1c0c38;
@@ -410,7 +449,7 @@ a {
 .navigation-bars-5Kq {
   display: grid;
   padding-left: 32%;
-  grid-template-columns: 48% 20%;
+  grid-template-columns: 48% 42%;
   position: relative;
 
   align-items: center;
@@ -431,6 +470,22 @@ a {
   .auto-group-46uh-xZy {
     grid-column-gap: 40px;
     font-size: 20px;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .auto-group-rbjr-g1y {
+    width: 200%;
+    display: grid;
+    /* grid-template-rows: 1fr 1fr;*/
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    row-gap: 10%;
+  }
+  .navigation-bars-5Kq {
+    display: inline-block;
+  }
+  .auto-group-46uh-xZy {
+    grid-column-gap: 40rem;
   }
 }
 @media only screen and (max-width: 2000px) {
@@ -462,12 +517,10 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-self: center;
-    /* width: 600px; */
     text-align: left;
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1;
-    letter-spacing: -0.224rem;
     color: #000000;
     font-family: JetBrains Mono, "Source Sans Pro";
     white-space: nowrap;
@@ -477,15 +530,12 @@ a {
   }
 
   /* for sumo sized (mac) screens */
-  .auto-group-46uh-xZy {
-    grid-column-gap: 40px;
-    font-size: 20px;
-  }
 }
 @media only screen and (max-width: 480px) {
   .ethanshagaei-NCB {
     font-size: 1.4rem !important;
   }
+
   .item-7-926-484-72-55-ZnT {
     font-size: 1.4rem !important;
   }
@@ -518,8 +568,8 @@ a {
   .saffronimage-1-hwZ {
     width: 32.7rem;
     height: 32.7rem;
-    left: 0%;
-    top: 25%;
+    left: 10%;
+    top: 35%;
   }
   .saffron4-1-V6j {
     width: 20%;
@@ -530,14 +580,18 @@ a {
     top: 190px;
     left: 12%;
   }
+  #totalCostP {
+    display: grid;
+    align-items: center;
+  }
   .auto-group-46uh-xZy {
     width: 80%;
     height: 100%;
-    /* padding-left: 20%; */
+    padding-left: 25%;
     text-align: left;
-    font-size: 15px;
+    font-size: 12px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     justify-items: end !important;
   }
@@ -659,10 +713,16 @@ a {
 }
 
 @media only screen and (min-width: 551px) {
+  .saffron3-1-cLK {
+    width: 42%;
+    height: 70%;
+    object-fit: cover;
+    justify-self: end;
+  }
   .offer-block-gRR {
     box-sizing: border-box;
     padding: 6% 6% 3% 5%;
-    margin-top: 20%;
+    margin-top: 80%;
     /* width: 65%; */
     align-items: center;
     justify-self: center;
@@ -677,6 +737,9 @@ a {
     display: none;
     width: 600px;
     border: #6b2a9d 1px solid;
+  }
+  .saffron-straight-from-iran-Rm5 {
+    font-size: 10em;
   }
 }
 
@@ -958,12 +1021,6 @@ a {
   flex-shrink: 0;
 }
 
-.saffron3-1-cLK {
-  width: 38%;
-  height: 80%;
-  object-fit: cover;
-  justify-self: end;
-}
 .bg-info-wrapper {
   box-sizing: border-box;
   width: 100%;
@@ -1236,6 +1293,11 @@ a {
   column-gap: 20px;
   align-content: space-around;
 }
+@media screen and (min-width: 1209px) {
+  .offer-block-gRR {
+    margin-top: 3%;
+  }
+}
 
 @media screen and (max-width: 1209px) {
   .auto-group-rbjr-g1y {
@@ -1246,8 +1308,6 @@ a {
     justify-items: center;
     row-gap: 10%;
   }
-}
-@media screen and (min-width: 1210px) {
 }
 
 .product-1-o6b {
